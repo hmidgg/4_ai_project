@@ -47,8 +47,7 @@ st.markdown("### 📥 Document Upload")
 uploaded_file = st.file_uploader("Upload your PDF file", type=["pdf"])
 
 if uploaded_file and st.button("Process & Summarize", type="primary", use_container_width=True):
-    with st.spinner("Analyzing document structure..."):
-        raw_content = extract_pdf_content(uploaded_file)
+    raw_content = extract_pdf_content(uploaded_file)
         
     if raw_content:
         clean = clean_text(raw_content)
